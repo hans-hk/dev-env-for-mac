@@ -1,0 +1,7 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "settingsSync.ignoredExtensions": [],
+  "settingsSync.ignoredSettings": []
+}
