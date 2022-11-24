@@ -100,11 +100,31 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# for k8s
+alias k='kubectl'
+
+# for zsh
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  fzf
+  fasd
+)
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# for vi
+alias vim="nvim"
+alias vi="nvim"
+alias vimdiff="nvim -d"
+export EDITOR=/usr/local/bin/nvim
+
 # for fzf
 autoload -U promptinit; promptinit
 prompt pure
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Open with kraken 
+# Open kraken 
 alias kraken="open -na 'GitKraken' --args -p $(pwd)"
