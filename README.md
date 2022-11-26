@@ -7,9 +7,9 @@ Homebrew와 Shell Script를 사용해서 맥 개발 환경을 원커맨드로 �
 해당 소스는 FE 개발자 버전이며 자신의 환경에 맞게 수정 할 수 있습니다.
 
 ### How to use
-기존의 저장소를 복사 합니다 (회사 계정 개인 저장소입니다)
+기존의 저장소를 복사 합니다
 ```
-git clone https://gh.greenlabsfin.com/hankuk-lee/gf-dev-env-for-mac.git
+git clone https://github.com/hans-hk/dev-env-for-mac
 ```
 
 개발 환경을 자동으로 구축합니다.
