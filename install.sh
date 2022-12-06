@@ -1,47 +1,26 @@
-#!/bin/bash
+#!/bin/zsh
 
-# install brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
-# install via brew
-brew bundle --file=./Brewfile
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# if downloaded by casks it should be using commands for security issue
-sudo xattr -dr com.apple.quarantine /Applications/iTerm.app
-open /Applications/iTerm.app
-sudo xattr -dr com.apple.quarantine /Applications/Expo\ XDE.app
-open /Applications/Expo\ XDE.app
-sudo xattr -dr com.apple.quarantine /Applications/Android\ Studio.app
-open /Applications/Android\ Studio.app
-sudo xattr -dr com.apple.quarantine /Applications/MySQLWorkbench.app
-open /Applications/MySQLWorkbench.app
-sudo xattr -dr com.apple.quarantine /Applications/Postman.app
-open /Applications/Postman.app
-sudo xattr -dr com.apple.quarantine /Applications/Google\ Chrome.app
-open /Applications/Google\ Chrome.app
-sudo xattr -dr com.apple.quarantine /Applications/Visual\ Studio\ Code.app
-open /Applications/Visual\ Studio\ Code.app
-sudo xattr -dr com.apple.quarantine /Applications/WebStorm.app
-open /Applications/WebStorm.app
+# install node v18.12.1 and set default
+nvm install 18.12.1
+nvm alias default 18.12.1
+nvm use default
 
-open /Applications/Slack.app
+# set corepack status to enable and set version
+corepack enable
+corepack prepare yarn@3.3.0 --activate
 
-# configure zsh
-chmod 755 ./zsh/install.sh
-./zsh/install.sh
+# print version
+NVM_VERSION=$(nvm -v)
+echo "nvm version: ${NVM_VERSION}"
 
-# configure VSCode
-chmod 755 ./vscode/install.sh
-./vscode/install.sh
+NODE_VERSION=$(node -v)
+echo "node version: ${NODE_VERSION}"
 
-# configure iterm2
-chmod 755 ./iterm2/install.sh
-./iterm2/install.sh
-
-# install react-native
-chmod 755 ./react-native/install.sh
-./react-native/install.sh
-
-# install xcode
-chmod 755 ./xcode/install.sh
-./xcode/install.sh
+YARN_VERSION=$(yarn -v)
+echo "yarn version: ${YARN_VERSION}"
