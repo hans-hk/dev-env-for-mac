@@ -3,11 +3,10 @@
 # install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# next steps configure PATH
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/{USERNAME}/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/{USERNAME}/.zprofile
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/$USER/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
-    
+
 # install via brew
 brew bundle --file=./Brewfile
 
@@ -48,5 +47,5 @@ chmod 755 ./react-native/install.sh
 ./react-native/install.sh
 
 # install xcode
-chmod 755 ./xcode/install.sh
-./xcode/install.sh
+# chmod 755 ./xcode/install.sh
+# ./xcode/install.sh
