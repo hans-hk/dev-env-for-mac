@@ -9,7 +9,6 @@ brew "gh"
 brew "git"
 brew "git-flow"
 brew "mysql", restart_service: true
-brew "node"
 brew "pure"
 brew "redis"
 brew "watchman"
