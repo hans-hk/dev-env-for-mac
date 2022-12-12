@@ -52,4 +52,4 @@ chmod 755 ./react-native/install.sh
 
 # install nvm
 chmod 755 ./nvm/install.sh
-./nvm/install.sh
+source ./nvm/install.sh
