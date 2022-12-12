@@ -4,8 +4,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # next steps configure PATH
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/hans/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/hans/.zprofile
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/{USERNAME}/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/{USERNAME}/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
     
 # install via brew
