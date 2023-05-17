@@ -15,7 +15,12 @@ brew "watchman"
 brew "yarn"
 brew "zsh-completions"
 brew "tree"
+brew "cloudflared"
+brew "planetscale/tap/pscale"
+brew "mysql-client"
+
 cask "google-chrome"
+cask "firefox"
 cask "android-studio"
 cask "expo-xde"
 cask "gitkraken"
@@ -26,6 +31,9 @@ cask "postman"
 cask "spectacle"
 cask "visual-studio-code"
 cask "webstorm"
-mas install 937984704 # Amphetamine
-mas install 1415817706 # Tadama
-mas install 803453959 # Slack for Desktop
+cask "notion"
+
+mas "KakaoTalk", id: 869223134
+mas "Amphetamine", id: 937984704
+mas "Tadama", id: 1415817706
+mas "Slack for Desktop", id: 803453959

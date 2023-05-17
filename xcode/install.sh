@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # mas를 사용하여 Xcode 설치
 mas install 497799835

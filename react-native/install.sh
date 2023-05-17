@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # react-native-cli를 설치
 npm install -g react-native-cli
